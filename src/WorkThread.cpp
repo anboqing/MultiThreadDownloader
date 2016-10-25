@@ -21,6 +21,7 @@
 #include "ThreadPool.h"
 #include "Cache.h"
 #include "typedefs.h"
+#include <errno.h>
 
 #include <glog/logging.h>
 
@@ -29,7 +30,6 @@ using namespace std;
 //TODO: write_data
 //
 
-extern int errno;
 
 static size_t write_data(void *ptr, size_t size, size_t nmemb, void *info)
 {
@@ -42,7 +42,6 @@ static size_t write_data(void *ptr, size_t size, size_t nmemb, void *info)
 
     if(!p_data_file){
         LOG(INFO) << " can not open data file  : " << data_file_path << endl;
-        //perror(strerr(errno)); 
     }
 
     // read beg from task manager's m_file_segment_list

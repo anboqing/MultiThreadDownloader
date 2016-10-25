@@ -15,8 +15,6 @@
 #include <string>
 #include <fstream>
 
-extern int errno;
-
 class Util{
 
     public:

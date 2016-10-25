@@ -12,6 +12,8 @@
 
 #include <map>
 #include <vector>
+#include <errno.h>
+
 using namespace std;
 
 TaskManager* TaskManager::mp_instance;
